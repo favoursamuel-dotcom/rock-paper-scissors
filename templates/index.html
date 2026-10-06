@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-paper-scissors game</title>
+</head>
+<body>
+    <h1>Rock-Paper-Scissors game</h1>
+    <p>choose one</p>
+    <form action="/" method="POST">
+        <div>
+            <button name="choice" value="rock" type="submit">Rock</button>
+            <button name="choice" value="paper" type="submit">Paper</button>
+            <button name="choice" value="scissors" type="submit">Scissors</button>
+        </div>
+    </form>
+    <p>{{ players_choice }}</p>
+    <p>{{ computer_choice }}</p>
+    <p>{{ result }}</p>
+</body>
+</html>
