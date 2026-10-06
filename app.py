@@ -9,11 +9,12 @@ def home():
     choices = ["rock", "paper", "scissors"]
     computer_choice = random.choice(choices)
     result = winner(choice, computer_choice)
-    return render_template("index.html",
-        result=result,
-        player_choice=choice,
-        computer_choice=computer_choice
-    )
+    if request.method == "POST":
+        return render_template("index.html",
+            result=result,
+            players_choice=choice,
+            computer_choice=computer_choice
+        )
 
 def winner(players_choice, computer_choice):
 
