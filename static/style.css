@@ -1,0 +1,31 @@
+body {
+  background-color: rgba(69, 18, 110, 0.699);
+}
+
+.rock {
+  background-image: url("Images/rock.svg");
+  background-position: center;
+  background-color: sienna;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  width: 5%;
+  padding: 2%;
+}
+.paper {
+  background-image: url("Images/paper.svg");
+  background-color: rgb(2, 2, 48);
+  background-position: center;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  width: 5%;
+  padding: 2%;
+}
+.scissors {
+  background-image: url("Images/scissors.svg");
+  background-color: rgb(122, 122, 5);
+  background-position: center;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  width: 5%;
+  padding: 2%;
+}
