@@ -1,3 +1,5 @@
+# timer
+# Score sheet
 import random
 from flask import Flask, render_template, request
 # import PIL as Image

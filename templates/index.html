@@ -2,26 +2,76 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rock-paper-scissors game</title>
+
+    <title>Rock Paper Scissors</title>
+
     <link
       rel="stylesheet"
       href="{{ url_for('static', filename='style.css') }}" />
   </head>
+
   <body>
-    <div class="overlay">
-      <h1>Rock-Paper-Scissors game</h1>
-      <p>choose one</p>
+    <main class="game-container">
+      <h1>🎮 Rock Paper Scissors</h1>
+
+      <p class="subtitle">Choose your weapon!</p>
+
+      <!-- GAME BUTTONS -->
+
       <form action="/" method="POST">
-        <div>
-          <button name="choice" value="rock" type="submit" class="rock"> </button>
-          <button name="choice" value="paper" type="submit" class="paper"> </button>
-          <button name="choice" value="scissors" type="submit" class="scissors"> </button>
+        <div class="choices">
+          <button
+            class="rock"
+            name="choice"
+            value="rock"
+            type="submit"
+            aria-label="Rock"></button>
+
+          <button
+            class="paper"
+            name="choice"
+            value="paper"
+            type="submit"
+            aria-label="Paper"></button>
+
+          <button
+            class="scissors"
+            name="choice"
+            value="scissors"
+            type="submit"
+            aria-label="Scissors"></button>
         </div>
       </form>
-      <p>You choose: {{ players_choice }}</p>
-      <p>Computer chooses: {{ computer_choice }}</p>
-      <p>{{ result }}</p>
-    </div>
+
+      <!-- GAME RESULT -->
+
+      {% if result %}
+
+      <section class="result-container">
+        <h2>Round Result</h2>
+
+        <div class="battle">
+          <div class="player">
+            <h3>YOU</h3>
+
+            <p>{{ players_choice }}</p>
+          </div>
+
+          <div class="vs">VS</div>
+
+          <div class="computer">
+            <h3>COMPUTER</h3>
+
+            <p>{{ computer_choice }}</p>
+          </div>
+        </div>
+
+        <div class="result-message">{{ result }}</div>
+      </section>
+
+      {% endif %}
+    </main>
   </body>
 </html>
